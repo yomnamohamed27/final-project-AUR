@@ -1,5 +1,8 @@
 #include <Arduino.h>
 #include <sensors.h>
+
+// put function declarations here:
+
 #include "ros_comms.h"
 
 void setup()
