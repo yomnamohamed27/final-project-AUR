@@ -13,14 +13,7 @@ inline volatile uint32_t last_heartbeat_ms = 0; // Last valid command time (ms)
 inline volatile uint8_t robot_mode = 0;         // 0=manual, 1=semi-auto, 2=fully-auto
 inline volatile bool arm_pick_requested = false;
 inline volatile bool arm_drop_requested = false;
-inline float target_linear_velocity = 0.0;      // Target linear speed (m/s)
-inline float target_angular_velocity = 0.0;     // Target angular speed (rad/s)
-inline int target_servo1_angle = 90;            // Target Servo 1 angle (0-180 deg)
-inline int target_servo2_angle = 90;            // Target Servo 2 angle (0-180 deg)
-inline volatile uint32_t last_heartbeat_ms = 0; // Last valid command time (ms)
-inline volatile uint8_t robot_mode = 0;         // 0=manual, 1=semi-auto, 2=fully-auto
-inline volatile bool arm_pick_requested = false;
-inline volatile bool arm_drop_requested = false;
+
 // ============================================================================
 // 2. MOTOR & SERVO CONTROL (Ammar)
 // ============================================================================
