@@ -46,7 +46,5 @@ for 500 ms, the ESP32 sets both velocity targets to zero.
 The ESP32 sends this line to port `8889` every 100 ms:
 
 ```text
-TELEMETRY,<x_m>,<y_m>,<theta_rad>,<linear_mps>,<battery_percent>,<mode>,<arm_status>
+TELEMETRY,<current_angular_velocity>,<current_linear_velocity>,<imu_gyro_x>,<imu_gyro_y>,<imu_gyro_z>,<imu_accel_x>,<imu_accel_y>,<imu_accel_z>
 ```
-
-These values are not final and will be changed

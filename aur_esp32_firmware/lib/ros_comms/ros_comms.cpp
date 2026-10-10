@@ -112,13 +112,25 @@ void sendTelemetry() {
     return;
   }
 
-  // TELEMETRY,values to be agreed on separated by commas
+  // TELEMETRY,<current_angular_velocity>,<current_linear_velocity>,<imu_gyro_x>,<imu_gyro_y>,<imu_gyro_z>,<imu_accel_x>,<imu_accel_y>,<imu_accel_z>
   udp.beginPacket(telemetryAddress, UDP_TELEMETRY_PORT);
   udp.print("TELEMETRY,");
-  //udp.print(imu_yaw, 4);
-  //udp.print(",");
-  //udp.print(target_linear_velocity, 4);
-  //udp.print(",");
+  udp.print(current_angular_velocity, 4);
+  udp.print(",");
+  udp.print(current_linear_velocity, 4);
+  udp.print(",");
+  udp.print(imu_gyro_x, 4);
+  udp.print(",");
+  udp.print(imu_gyro_y, 4);
+  udp.print(",");
+  udp.print(imu_gyro_z, 4);
+  udp.print(",");
+  udp.print(imu_accel_x, 4);
+  udp.print(",");
+  udp.print(imu_accel_y, 4);
+  udp.print(",");
+  udp.print(imu_accel_z, 4);
+
   udp.endPacket();
 }
 
